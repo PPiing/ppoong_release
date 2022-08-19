@@ -2,12 +2,12 @@ version: '3'
 services:
   gateway:
     container_name: nginx_gateway
-    build: ./gateway_release
+    build: gateway_release
     ports:
       - '80:80'
   backend:
     container_name: backend
-    build: ../backend
+    build: backend
     environment:
       DATABASE_HOST: postgres
       DATABASE_PASSWORD: ${POSTGRES_PASSWORD}
@@ -21,7 +21,7 @@ services:
       MAILDEV_INCOMING_PASS: ${MAILDEV_INCOMING_PASS}
   frontend:
     container_name: frontend
-    build: ../frontend
+    build: frontend
   postgres:
     #FIXME 추후에 환경변수를 받아 설정하도록 변경해야 함
     container_name: postgres
