@@ -102,9 +102,4 @@ $RECYCLE.BIN/
 # ppong .env files
 .env
 
-# ppong folders
-backend
-frontend
-upload
-
 # End of https://www.toptal.com/developers/gitignore/api/macos,windows,visualstudiocode,vim
